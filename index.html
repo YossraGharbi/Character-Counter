@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Character Counter</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="CharacterCalculatorApp">
+	<div class="container" ng-controller="CharacterCalculatorController">
+		<div>
+			<h1>Character Counter</h1>
+		</div>
+		<div>
+			<textarea ng-model="myText" ng-trim="false" placeholder="Enter your text here..."></textarea>
+		</div>
+		<div>
+			<button ng-click="reset();"> Reset</button>
+		</div>
+		<div class="output row">
+			<strong>Total Characters: {{myText.length}}</strong>
+		</div>
+		<div class="output row">
+			<strong>Total Words: <span ng-bind="countOfWords(myText)"></span></strong>
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
